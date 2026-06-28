@@ -3,7 +3,9 @@
     "allow": [
       "PowerShell(python --version)",
       "PowerShell(pip --version)",
-      "PowerShell(pip install Pillow numpy scipy --quiet)"
+      "PowerShell(pip install Pillow numpy scipy --quiet)",
+      "PowerShell(Start-Sleep -Seconds 4; \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing\\).StatusCode)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MSI\\\\Desktop\" -ErrorAction SilentlyContinue | Select-Object Name, @{N='SizeMB';E={[math]::Round\\($_.Length/1MB,2\\)}}; Write-Host \"---\"; Get-ChildItem \"C:\\\\Users\\\\MSI\\\\Downloads\" -ErrorAction SilentlyContinue | Select-Object Name, @{N='SizeMB';E={[math]::Round\\($_.Length/1MB,2\\)}} | Select-Object -First 30)"
     ]
   }
 }
