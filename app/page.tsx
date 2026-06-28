@@ -6,6 +6,20 @@ import AmbientEffects from "@/app/components/AmbientEffects";
 export default function HeroPage() {
   return (
     <main className="hero-page">
+      {/* ── SEO: crawlable text — visually hidden ── */}
+      <div className="sr-only">
+        <h1>ANTAR — The Last Flame</h1>
+        <p>
+          An original game by Agnix Studio. ANTAR — The Last Flame is a
+          cinematic Indian mythological action-platformer about memory, courage,
+          compassion and sacred fire. Coming soon.
+        </p>
+        <p>
+          Agnix Studio is an independent Indian creative production studio
+          developing original games, cinematic stories, animation, comics and
+          connected fictional universes.
+        </p>
+      </div>
       {/* ── Background layer ── */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
